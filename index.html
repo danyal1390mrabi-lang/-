@@ -7,50 +7,34 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Tahoma,Arial,sans-serif;background:#0f0f0f;color:#fff;min-height:100vh}
-
 nav{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:1px solid #1e1e1e}
-.logo{font-size:18px;font-weight:500;color:#fff}
-.logo span{color:#f0a500}
+.logo{font-size:18px;font-weight:500}.logo span{color:#f0a500}
 .nav-links{display:flex;gap:24px}
-.nav-links a{color:#888;text-decoration:none;font-size:14px;transition:color 0.2s}
-.nav-links a:hover{color:#fff}
-
+.nav-links a{color:#888;text-decoration:none;font-size:14px}.nav-links a:hover{color:#fff}
 .hero{text-align:center;padding:80px 20px 60px}
-.hero h1{font-size:42px;font-weight:500;margin-bottom:16px;line-height:1.2}
-.hero h1 span{color:#f0a500}
+.hero h1{font-size:42px;font-weight:500;margin-bottom:16px}.hero h1 span{color:#f0a500}
 .hero p{font-size:16px;color:#888;max-width:480px;margin:0 auto 40px;line-height:1.7}
-
-.btn-download{display:inline-flex;align-items:center;gap:10px;background:#f0a500;color:#000;text-decoration:none;padding:14px 32px;border-radius:12px;font-size:16px;font-weight:500;transition:background 0.2s,transform 0.1s;cursor:pointer;border:none}
-.btn-download:hover{background:#e09900;transform:translateY(-2px)}
-.btn-download:active{transform:scale(0.97)}
-.btn-download svg{width:20px;height:20px}
-
+.btn-download{display:inline-flex;align-items:center;gap:10px;background:#f0a500;color:#000;padding:14px 32px;border-radius:12px;font-size:16px;font-weight:500;cursor:pointer;border:none;font-family:Tahoma,Arial,sans-serif}
+.btn-download:hover{background:#e09900}
 .preview{margin:60px auto;max-width:360px;padding:0 20px}
-.preview img{display:none}
-.calc-preview{background:#1a1a1a;border-radius:20px;padding:20px;border:1px solid #2a2a2a;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.calc-preview{background:#1a1a1a;border-radius:20px;padding:20px;border:1px solid #2a2a2a}
 .calc-display{background:#111;border-radius:12px;padding:16px 20px;margin-bottom:16px;min-height:80px;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;border:1px solid #222}
 .calc-display .num{font-size:36px;color:#fff;direction:ltr}
 .calc-display .expr{font-size:13px;color:#555;direction:ltr}
 .calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.cb{border:none;border-radius:8px;height:48px;font-size:15px;cursor:pointer}
-.cn{background:#2a2a2a;color:#fff}
-.co{background:#333;color:#f0a500}
-.ce{background:#f0a500;color:#000;font-weight:500}
-.cf{background:#222;color:#aaa;font-size:13px}
-.cs{background:#222;color:#ff5555}
-.cz{grid-column:span 2}
-
+.cb{border:none;border-radius:8px;height:48px;font-size:15px}
+.cn{background:#2a2a2a;color:#fff}.co{background:#333;color:#f0a500}
+.ce{background:#f0a500;color:#000;font-weight:500}.cf{background:#222;color:#aaa;font-size:13px}
+.cs{background:#222;color:#ff5555}.cz{grid-column:span 2}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:900px;margin:0 auto 80px;padding:0 20px}
 .feature{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:14px;padding:24px}
 .feature-icon{font-size:28px;margin-bottom:12px}
-.feature h3{font-size:15px;font-weight:500;margin-bottom:8px;color:#fff}
+.feature h3{font-size:15px;font-weight:500;margin-bottom:8px}
 .feature p{font-size:13px;color:#666;line-height:1.6}
-
 .about{text-align:center;padding:60px 20px;border-top:1px solid #1e1e1e}
 .about h2{font-size:24px;font-weight:500;margin-bottom:12px}
 .about p{font-size:14px;color:#666;margin-bottom:6px}
 .about .contact{font-size:16px;color:#f0a500;margin-top:16px;font-weight:500}
-
 footer{text-align:center;padding:24px;border-top:1px solid #1e1e1e;font-size:13px;color:#444}
 </style>
 </head>
@@ -61,17 +45,14 @@ footer{text-align:center;padding:24px;border-top:1px solid #1e1e1e;font-size:13p
   <div class="nav-links">
     <a href="#features">ویژگی‌ها</a>
     <a href="#about">درباره</a>
-    <a href="#" onclick="downloadCalc()">دانلود</a>
+    <a href="#" onclick="downloadCalc();return false">دانلود</a>
   </div>
 </nav>
 
 <div class="hero">
   <h1>ماشین حساب <span>حرفه‌ای</span></h1>
   <p>یک ماشین حساب علمی کامل با طراحی مدرن — رایگان و آماده استفاده</p>
-  <button class="btn-download" onclick="downloadCalc()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg>
-    دانلود رایگان
-  </button>
+  <button class="btn-download" onclick="downloadCalc()">⬇ دانلود رایگان</button>
 </div>
 
 <div class="preview">
@@ -92,26 +73,10 @@ footer{text-align:center;padding:24px;border-top:1px solid #1e1e1e;font-size:13p
 </div>
 
 <div class="features" id="features">
-  <div class="feature">
-    <div class="feature-icon">🧮</div>
-    <h3>عملیات پایه</h3>
-    <p>جمع، تفریق، ضرب، تقسیم و درصد با دقت بالا</p>
-  </div>
-  <div class="feature">
-    <div class="feature-icon">📐</div>
-    <h3>توابع علمی</h3>
-    <p>sin، cos، tan، ریشه دوم، لگاریتم، توان و بیشتر</p>
-  </div>
-  <div class="feature">
-    <div class="feature-icon">⏱</div>
-    <h3>تاریخچه</h3>
-    <p>تمام محاسبات ذخیره می‌شن و قابل بازیابی هستن</p>
-  </div>
-  <div class="feature">
-    <div class="feature-icon">⌨️</div>
-    <h3>پشتیبانی کیبورد</h3>
-    <p>تمام کلیدهای عددی و عملگرها پشتیبانی می‌شن</p>
-  </div>
+  <div class="feature"><div class="feature-icon">🧮</div><h3>عملیات پایه</h3><p>جمع، تفریق، ضرب، تقسیم و درصد با دقت بالا</p></div>
+  <div class="feature"><div class="feature-icon">📐</div><h3>توابع علمی</h3><p>sin، cos، tan، ریشه دوم، لگاریتم، توان و بیشتر</p></div>
+  <div class="feature"><div class="feature-icon">⏱</div><h3>تاریخچه</h3><p>تمام محاسبات ذخیره می‌شن و قابل بازیابی هستن</p></div>
+  <div class="feature"><div class="feature-icon">⌨️</div><h3>پشتیبانی کیبورد</h3><p>تمام کلیدهای عددی و عملگرها پشتیبانی می‌شن</p></div>
 </div>
 
 <div class="about" id="about">
@@ -120,128 +85,121 @@ footer{text-align:center;padding:24px;border-top:1px solid #1e1e1e;font-size:13p
   <div class="contact">شماره تماس: به زودی</div>
 </div>
 
-<footer>
-  ساخته شده توسط دانیال مرادی &nbsp;·&nbsp; تمامی حقوق محفوظ است
-</footer>
+<footer>ساخته شده توسط دانیال مرادی &nbsp;·&nbsp; تمامی حقوق محفوظ است</footer>
 
 <script>
 function downloadCalc() {
-  const code = `<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ماشین حساب - دانیال مرادی</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Tahoma,Arial,sans-serif;background:#0f0f0f;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
-.header{text-align:center;margin-bottom:28px;color:#fff}
-.header h1{font-size:20px;font-weight:500;color:#fff;margin-bottom:6px;letter-spacing:1px}
-.header p{font-size:13px;color:#888}
-.calc{background:#1a1a1a;border-radius:20px;padding:20px;width:100%;max-width:340px;border:1px solid #2a2a2a}
-.display{background:#111;border-radius:12px;padding:16px 20px;margin-bottom:16px;min-height:90px;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;border:1px solid #222}
-.display .expr{font-size:13px;color:#666;min-height:18px;word-break:break-all;direction:ltr;text-align:right}
-.display .num{font-size:36px;font-weight:400;color:#fff;word-break:break-all;direction:ltr;text-align:right;line-height:1.2}
-.history-btn{width:100%;background:transparent;border:none;color:#555;font-size:12px;cursor:pointer;text-align:right;padding:0 4px 10px;font-family:Tahoma,Arial,sans-serif}
-.history-btn:hover{color:#888}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-button{border:none;border-radius:10px;font-size:17px;cursor:pointer;height:58px;font-family:Tahoma,Arial,sans-serif;transition:transform 0.08s,opacity 0.1s;font-weight:400}
-button:active{transform:scale(0.95);opacity:0.8}
-.btn-num{background:#2a2a2a;color:#fff}
-.btn-num:hover{background:#333}
-.btn-op{background:#333;color:#f0a500}
-.btn-op:hover{background:#3a3a3a}
-.btn-eq{background:#f0a500;color:#000;font-weight:500}
-.btn-eq:hover{background:#e09900}
-.btn-fn{background:#222;color:#aaa;font-size:14px}
-.btn-fn:hover{background:#2a2a2a}
-.btn-clear{background:#222;color:#ff5555}
-.btn-clear:hover{background:#2a2a2a}
-.btn-zero{grid-column:span 2}
-.history-panel{display:none;background:#1a1a1a;border-radius:12px;padding:12px;margin-top:10px;max-height:140px;overflow-y:auto;border:1px solid #2a2a2a}
-.history-panel.show{display:block}
-.h-item{font-size:13px;color:#888;padding:5px 0;border-bottom:1px solid #222;text-align:left;direction:ltr;cursor:pointer}
-.h-item:hover{color:#f0a500}
-.h-item:last-child{border-bottom:none}
-.h-empty{font-size:12px;color:#555;text-align:center;padding:10px}
-</style>
-</head>
-<body>
-<div class="header">
-  <h1>ساخته شده توسط دانیال مرادی</h1>
-  <p>شماره تماس: به زودی</p>
-</div>
-<div class="calc">
-  <div class="display">
-    <div class="expr" id="expr"></div>
-    <div class="num" id="display">0</div>
-  </div>
-  <button class="history-btn" onclick="toggleHistory()">⏱ تاریخچه</button>
-  <div class="grid">
-    <button class="btn-fn" onclick="fn('sin')">sin</button>
-    <button class="btn-fn" onclick="fn('cos')">cos</button>
-    <button class="btn-fn" onclick="fn('tan')">tan</button>
-    <button class="btn-fn" onclick="fn('sqrt')">√</button>
-    <button class="btn-fn" onclick="fn('log')">log</button>
-    <button class="btn-fn" onclick="fn('ln')">ln</button>
-    <button class="btn-fn" onclick="inputOp('^')">x^y</button>
-    <button class="btn-fn" onclick="fn('inv')">1/x</button>
-    <button class="btn-fn" onclick="inputConst('pi')">π</button>
-    <button class="btn-fn" onclick="inputConst('e')">e</button>
-    <button class="btn-fn" onclick="toggleSign()">±</button>
-    <button class="btn-fn" onclick="inputParen()">( )</button>
-    <button class="btn-clear" onclick="clearAll()">AC</button>
-    <button class="btn-fn" onclick="backspace()">⌫</button>
-    <button class="btn-fn" onclick="inputKey('%')">%</button>
-    <button class="btn-op" onclick="inputOp('/')">÷</button>
-    <button class="btn-num" onclick="inputKey('7')">7</button>
-    <button class="btn-num" onclick="inputKey('8')">8</button>
-    <button class="btn-num" onclick="inputKey('9')">9</button>
-    <button class="btn-op" onclick="inputOp('*')">×</button>
-    <button class="btn-num" onclick="inputKey('4')">4</button>
-    <button class="btn-num" onclick="inputKey('5')">5</button>
-    <button class="btn-num" onclick="inputKey('6')">6</button>
-    <button class="btn-op" onclick="inputOp('-')">−</button>
-    <button class="btn-num" onclick="inputKey('1')">1</button>
-    <button class="btn-num" onclick="inputKey('2')">2</button>
-    <button class="btn-num" onclick="inputKey('3')">3</button>
-    <button class="btn-op" onclick="inputOp('+')">+</button>
-    <button class="btn-num btn-zero" onclick="inputKey('0')">0</button>
-    <button class="btn-num" onclick="inputKey('.')">.</button>
-    <button class="btn-eq" onclick="calculate()">=</button>
-  </div>
-  <div class="history-panel" id="history-panel">
-    <div id="history-list"><div class="h-empty">تاریخچه‌ای وجود ندارد</div></div>
-  </div>
-</div>
-<script>
-let expr='',justCalc=false,history=[],parenOpen=0;
-const disp=document.getElementById('display'),exprEl=document.getElementById('expr');
-function update(v,e){disp.textContent=v;exprEl.textContent=e||'';disp.style.fontSize=v.length>12?'22px':v.length>9?'28px':'36px'}
-function inputKey(k){if(justCalc){expr='';justCalc=false}if(k==='.'&&expr.split(/[+\\-*/^]/).pop().includes('.'))return;expr+=k;update(expr,'')}
-function inputOp(op){justCalc=false;if(expr===''&&op==='-'){expr='-';update('-','');return}if(expr==='')return;const last=expr.slice(-1);if(['+','-','*','/','\\^'].includes(last))expr=expr.slice(0,-1);expr+=op;const s=expr.replace(/\\*/g,'×').replace(/\\//g,'÷');update(s.slice(-8),s)}
-function inputConst(c){justCalc=false;const val=c==='pi'?Math.PI:Math.E;expr+=val;update(c==='pi'?'π':'e',expr.replace(/\\*/g,'×').replace(/\\//g,'÷'))}
-function inputParen(){justCalc=false;const last=expr.slice(-1);if(parenOpen===0||['+','-','*','/','\\^','('].includes(last)||expr===''){expr+='(';parenOpen++}else{expr+=')';parenOpen--}update(expr,'')}
-function fn(name){justCalc=false;let cur=expr||'0',v;try{v=eval(cur.replace(/\\^/g,'**'))}catch(e){v=parseFloat(cur)||0}let res;switch(name){case 'sin':res=Math.sin(v*Math.PI/180);break;case 'cos':res=Math.cos(v*Math.PI/180);break;case 'tan':res=Math.tan(v*Math.PI/180);break;case 'sqrt':res=Math.sqrt(v);break;case 'log':res=Math.log10(v);break;case 'ln':res=Math.log(v);break;case 'inv':res=1/v;break}const label=name+'('+round(v)+')';addHistory(label+' = '+round(res));expr=String(round(res));update(round(res),label);justCalc=true}
-function toggleSign(){if(!expr)return;if(expr.startsWith('-'))expr=expr.slice(1);else expr='-'+expr;update(expr,'')}
-function backspace(){justCalc=false;expr=expr.slice(0,-1);update(expr||'0','')}
-function clearAll(){expr='';justCalc=false;parenOpen=0;update('0','')}
-function calculate(){if(!expr)return;try{const shown=expr.replace(/\\*/g,'×').replace(/\\//g,'÷');let e=expr.replace(/\\^/g,'**').replace(/%/g,'/100');let res=eval(e);if(!isFinite(res)){update('خطا','');expr='';return}res=round(res);addHistory(shown+' = '+res);expr=String(res);update(res,shown+' =');justCalc=true}catch(e){update('خطا','');expr=''}}
-function round(n){if(Number.isInteger(n))return n;return parseFloat(n.toPrecision(10))}
-function addHistory(item){history.unshift(item);if(history.length>20)history.pop();renderHistory()}
-function renderHistory(){const el=document.getElementById('history-list');if(!history.length){el.innerHTML='<div class="h-empty">تاریخچه‌ای وجود ندارد</div>';return}el.innerHTML=history.map(h=>'<div class="h-item" onclick="loadHistory(\''+h+'\')">'+h+'</div>').join('')}
-function loadHistory(h){const parts=h.split(' = ');if(parts[1]){expr=parts[1];update(parts[1],parts[0]+' =');justCalc=true}}
-function toggleHistory(){document.getElementById('history-panel').classList.toggle('show')}
-document.addEventListener('keydown',e=>{if(e.key>='0'&&e.key<='9')inputKey(e.key);else if(e.key==='.')inputKey('.');else if(e.key==='+')inputOp('+');else if(e.key==='-')inputOp('-');else if(e.key==='*')inputOp('*');else if(e.key==='/'){e.preventDefault();inputOp('/')}else if(e.key==='Enter'||e.key==='=')calculate();else if(e.key==='Backspace')backspace();else if(e.key==='Escape')clearAll()});
-<\/script>
-</body>
-</html>`;
+  var lines = [
+    '<!DOCTYPE html>',
+    '<html lang="fa" dir="rtl">',
+    '<head>',
+    '<meta charset="UTF-8">',
+    '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+    '<title>ماشین حساب - دانیال مرادی</title>',
+    '<style>',
+    '*{box-sizing:border-box;margin:0;padding:0}',
+    'body{font-family:Tahoma,Arial,sans-serif;background:#0f0f0f;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}',
+    '.header{text-align:center;margin-bottom:28px}',
+    '.header h1{font-size:20px;font-weight:500;color:#fff;margin-bottom:6px}',
+    '.header p{font-size:13px;color:#888}',
+    '.calc{background:#1a1a1a;border-radius:20px;padding:20px;width:100%;max-width:340px;border:1px solid #2a2a2a}',
+    '.display{background:#111;border-radius:12px;padding:16px 20px;margin-bottom:16px;min-height:90px;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;border:1px solid #222}',
+    '.display .expr{font-size:13px;color:#666;min-height:18px;word-break:break-all;direction:ltr;text-align:right}',
+    '.display .num{font-size:36px;font-weight:400;color:#fff;word-break:break-all;direction:ltr;text-align:right;line-height:1.2}',
+    '.hbtn{width:100%;background:transparent;border:none;color:#555;font-size:12px;cursor:pointer;text-align:right;padding:0 4px 10px;font-family:Tahoma,Arial,sans-serif}',
+    '.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}',
+    'button{border:none;border-radius:10px;font-size:17px;cursor:pointer;height:58px;font-family:Tahoma,Arial,sans-serif;transition:transform 0.08s;font-weight:400}',
+    'button:active{transform:scale(0.95)}',
+    '.bn{background:#2a2a2a;color:#fff}',
+    '.bo{background:#333;color:#f0a500}',
+    '.be{background:#f0a500;color:#000;font-weight:500}',
+    '.bf{background:#222;color:#aaa;font-size:14px}',
+    '.bc{background:#222;color:#ff5555}',
+    '.bz{grid-column:span 2}',
+    '.hp{display:none;background:#111;border-radius:12px;padding:12px;margin-top:10px;max-height:140px;overflow-y:auto;border:1px solid #222}',
+    '.hp.show{display:block}',
+    '.hi{font-size:13px;color:#888;padding:5px 0;border-bottom:1px solid #222;text-align:left;direction:ltr;cursor:pointer}',
+    '.hi:hover{color:#f0a500}',
+    '.he{font-size:12px;color:#555;text-align:center;padding:10px}',
+    '</style>',
+    '</head>',
+    '<body>',
+    '<div class="header">',
+    '  <h1>ساخته شده توسط دانیال مرادی</h1>',
+    '  <p>شماره تماس: به زودی</p>',
+    '</div>',
+    '<div class="calc">',
+    '  <div class="display">',
+    '    <div class="expr" id="expr"></div>',
+    '    <div class="num" id="display">0</div>',
+    '  </div>',
+    '  <button class="hbtn" onclick="toggleH()">&#x23F1; تاریخچه</button>',
+    '  <div class="grid">',
+    '    <button class="bf" onclick="fn(\'sin\')">sin</button>',
+    '    <button class="bf" onclick="fn(\'cos\')">cos</button>',
+    '    <button class="bf" onclick="fn(\'tan\')">tan</button>',
+    '    <button class="bf" onclick="fn(\'sqrt\')">&#x221A;</button>',
+    '    <button class="bf" onclick="fn(\'log\')">log</button>',
+    '    <button class="bf" onclick="fn(\'ln\')">ln</button>',
+    '    <button class="bf" onclick="op(\'^\')">x&#x02B8;</button>',
+    '    <button class="bf" onclick="fn(\'inv\')">1/x</button>',
+    '    <button class="bf" onclick="cnst(\'pi\')">&#x03C0;</button>',
+    '    <button class="bf" onclick="cnst(\'e\')">e</button>',
+    '    <button class="bf" onclick="sgn()">&#x00B1;</button>',
+    '    <button class="bf" onclick="par()">( )</button>',
+    '    <button class="bc" onclick="clr()">AC</button>',
+    '    <button class="bf" onclick="bsp()">&#x232B;</button>',
+    '    <button class="bf" onclick="inp(\'%\')">%</button>',
+    '    <button class="bo" onclick="op(\'/\')">&#x00F7;</button>',
+    '    <button class="bn" onclick="inp(\'7\')">7</button>',
+    '    <button class="bn" onclick="inp(\'8\')">8</button>',
+    '    <button class="bn" onclick="inp(\'9\')">9</button>',
+    '    <button class="bo" onclick="op(\'*\')">&#x00D7;</button>',
+    '    <button class="bn" onclick="inp(\'4\')">4</button>',
+    '    <button class="bn" onclick="inp(\'5\')">5</button>',
+    '    <button class="bn" onclick="inp(\'6\')">6</button>',
+    '    <button class="bo" onclick="op(\'-\')">&#x2212;</button>',
+    '    <button class="bn" onclick="inp(\'1\')">1</button>',
+    '    <button class="bn" onclick="inp(\'2\')">2</button>',
+    '    <button class="bn" onclick="inp(\'3\')">3</button>',
+    '    <button class="bo" onclick="op(\'+\')">+</button>',
+    '    <button class="bn bz" onclick="inp(\'0\')">0</button>',
+    '    <button class="bn" onclick="inp(\'.\')">.</button>',
+    '    <button class="be" onclick="calc()">=</button>',
+    '  </div>',
+    '  <div class="hp" id="hp"><div id="hl"><div class="he">تاریخچه‌ای وجود ندارد</div></div></div>',
+    '</div>',
+    '<script>',
+    'var ex="",jc=false,hist=[],po=0;',
+    'var D=document.getElementById("display"),E=document.getElementById("expr");',
+    'function upd(v,e){D.textContent=v;E.textContent=e||"";D.style.fontSize=String(v).length>12?"22px":String(v).length>9?"28px":"36px"}',
+    'function inp(k){if(jc){ex="";jc=false}if(k==="."&&ex.split(/[+\\-*\\/\\^]/).pop().indexOf(".")>=0)return;ex+=k;upd(ex,"")}',
+    'function op(o){jc=false;if(ex===""&&o==="-"){ex="-";upd("-","");return}if(ex==="")return;var l=ex.slice(-1);if("+-*/^".indexOf(l)>=0)ex=ex.slice(0,-1);ex+=o;var s=ex.replace(/\\*/g,"x").replace(/\\//g,"÷");upd(s.slice(-8),s)}',
+    'function cnst(c){jc=false;ex+=c==="pi"?Math.PI:Math.E;upd(c==="pi"?"π":"e","")}',
+    'function par(){jc=false;var l=ex.slice(-1);if(po===0||"+-*/^(".indexOf(l)>=0||ex===""){ex+="(";po++}else{ex+=")";po--}upd(ex,"")}',
+    'function fn(n){jc=false;var cur=ex||"0",v;try{v=eval(cur.replace(/\\^/g,"**"))}catch(err){v=parseFloat(cur)||0}var r;if(n==="sin")r=Math.sin(v*Math.PI/180);else if(n==="cos")r=Math.cos(v*Math.PI/180);else if(n==="tan")r=Math.tan(v*Math.PI/180);else if(n==="sqrt")r=Math.sqrt(v);else if(n==="log")r=Math.log10(v);else if(n==="ln")r=Math.log(v);else if(n==="inv")r=1/v;var lb=n+"("+rnd(v)+")";addH(lb+" = "+rnd(r));ex=String(rnd(r));upd(rnd(r),lb);jc=true}',
+    'function sgn(){if(!ex)return;ex=ex[0]==="-"?ex.slice(1):"-"+ex;upd(ex,"")}',
+    'function bsp(){jc=false;ex=ex.slice(0,-1);upd(ex||"0","")}',
+    'function clr(){ex="";jc=false;po=0;upd("0","")}',
+    'function calc(){if(!ex)return;try{var s=ex.replace(/\\*/g,"x").replace(/\\//g,"÷");var e2=ex.replace(/\\^/g,"**").replace(/%/g,"/100");var r=eval(e2);if(!isFinite(r)){upd("خطا","");ex="";return}r=rnd(r);addH(s+" = "+r);ex=String(r);upd(r,s+" =");jc=true}catch(err){upd("خطا","");ex=""}}',
+    'function rnd(n){if(Number.isInteger(n))return n;return parseFloat(n.toPrecision(10))}',
+    'function addH(item){hist.unshift(item);if(hist.length>20)hist.pop();renderH()}',
+    'function renderH(){var el=document.getElementById("hl");if(!hist.length){el.innerHTML=\'<div class="he">تاریخچه‌ای وجود ندارد</div>\';return}el.innerHTML=hist.map(function(h){return\'<div class="hi">\'+h+\'</div>\'}).join("")}',
+    'function toggleH(){document.getElementById("hp").classList.toggle("show")}',
+    'document.addEventListener("keydown",function(e){if(e.key>="0"&&e.key<="9")inp(e.key);else if(e.key===".")inp(".");else if(e.key==="+")op("+");else if(e.key==="-")op("-");else if(e.key==="*")op("*");else if(e.key==="/"){e.preventDefault();op("/")}else if(e.key==="Enter"||e.key==="=")calc();else if(e.key==="Backspace")bsp();else if(e.key==="Escape")clr()});',
+    '<\/script>',
+    '</body>',
+    '</html>'
+  ];
 
-  const blob = new Blob([code], {type: 'text/html;charset=utf-8'});
-  const a = document.createElement('a');
+  var code = lines.join('\n');
+  var blob = new Blob([code], {type: 'text/html;charset=utf-8'});
+  var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = 'calculator-danial-moradi.html';
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
 }
 </script>
 </body>
